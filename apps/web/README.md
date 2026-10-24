@@ -1,5 +1,12 @@
 # Owner and agent UI
 
-Next.js, React, TypeScript, and shadcn/ui for the business owner and support agent.
+Next.js App Router, React, TypeScript, Tailwind CSS, and shadcn/ui.
 
-This directory is only the reserved place for that app. It is not scaffolded yet.
+```bash
+npm install
+npm run dev
+npm run lint
+npm run typecheck
+```
+
+Copy `.env.example` to `.env.local` when authentication is wired. Do not commit `.env.local`.
