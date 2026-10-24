@@ -1,0 +1,35 @@
+[project]
+name = "respondly"
+version = "0.1.0"
+description = "Respondly V1, a multi-tenant AI-first customer support workspace"
+requires-python = ">=3.12"
+dependencies = [
+    "respondly-api",
+    "respondly-worker",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+respondly-api = { workspace = true }
+respondly-worker = { workspace = true }
+
+[tool.uv.workspace]
+members = [
+    "apps/api",
+    "apps/worker",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.2",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["apps/api/src", "apps/worker/src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
