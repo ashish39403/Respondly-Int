@@ -13,6 +13,11 @@ wheels/
 .env
 .env.*
 !.env.example
+credentials.json
+*.pem
+*.key
+id_rsa
+id_rsa.pub
 
 # Test and tooling caches
 .pytest_cache/
