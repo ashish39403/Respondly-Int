@@ -24,7 +24,12 @@ members = [
 [dependency-groups]
 dev = [
     "ruff>=0.17.2",
+    "pytest>=8.3.0",
+    "httpx>=0.28.0",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["apps/api/tests"]
 
 [tool.ruff]
 line-length = 100
